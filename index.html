@@ -1,0 +1,159 @@
+<!--
+Ria Agustin — Personal Profile Website (single-file HTML)
+Instructions:
+1) To preview locally: open this file in a browser.
+2) To publish on GitHub Pages (username.github.io):
+   - Create a new repo named: <your-github-username>.github.io
+   - Upload this file as index.html to the repo root and enable Pages (branch: main).
+   - To use a custom domain like www.yourdomain.com, create a file named CNAME with the single line: www.yourdomain.com
+     and add it to the repo root. Then configure your domain DNS:
+       * Add a CNAME record: name = www, value = <your-github-username>.github.io
+       * (Optional) If you want the apex domain (yourdomain.com) to redirect to www, configure your domain provider's forwarding or add A records as instructed by GitHub Pages docs.
+3) If you publish to Netlify / Vercel, connect the repo and set the custom domain in their dashboard (they will show exact DNS records).
+
+Replace placeholders where needed (like Instagram handle or email).
+--><!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ria Agustin — Profil</title>
+  <meta name="description" content="Profil Ria Agustin — Mahasiswa Sistem Teknologi dan Informasi 2025">
+  <style>
+    :root{
+      --sky: #7ec8ff; /* sky blue */
+      --black-elegant: #0b0b0b;
+      --muted: #6b6b6b;
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --radius: 14px;
+      --maxwidth: 900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg),#eef7ff 60%);
+      color:var(--black-elegant);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+    }
+    .wrap{
+      max-width:var(--maxwidth);
+      margin:0 auto;
+      background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(11,11,11,0.08);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:0;
+    }
+    header.card{
+      padding:28px;
+      background:linear-gradient(135deg,var(--sky), #1fa2ff);
+      color:white;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    .avatar{
+      width:130px;height:130px;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0.05));
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:rgba(11,11,11,0.9);
+      box-shadow:0 6px 18px rgba(15,76,129,0.18);border:4px solid rgba(255,255,255,0.25);
+    }
+    header h1{margin:14px 0 6px;font-size:22px;letter-spacing:0.4px}
+    header p.sub{margin:0;font-weight:600;opacity:0.95}main{
+  padding:28px 34px;
+  background:var(--card);
+}
+.section{
+  margin-bottom:20px;
+}
+h2{
+  margin:0 0 10px;font-size:18px;color:var(--black-elegant);
+  display:flex;align-items:center;gap:10px
+}
+.tag{background:var(--sky);color:var(--black-elegant);font-size:12px;padding:4px 8px;border-radius:999px;font-weight:700}
+p{margin:0 0 10px;color:var(--muted);line-height:1.6}
+ul.skills{display:flex;gap:8px;flex-wrap:wrap;padding:0;list-style:none;margin:0}
+ul.skills li{background:#f1f8ff;padding:8px 12px;border-radius:999px;font-weight:600;color:var(--black-elegant);border:1px solid rgba(126,200,255,0.25)}
+
+.contact a{color:var(--black-elegant);text-decoration:none;font-weight:700}
+.contact .handle{display:inline-block;background:#0b0b0b;color:white;padding:8px 12px;border-radius:8px;margin-top:8px}
+
+footer{padding:20px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:880px){
+  .wrap{grid-template-columns:1fr;}
+  header{flex-direction:row;gap:18px;padding:18px}
+  header h1{font-size:18px}
+  main{padding:18px}
+}
+
+/* small decorative */
+.meta-row{display:flex;gap:12px;flex-wrap:wrap}
+.pill{padding:6px 10px;border-radius:999px;background:#f5f8fb;font-weight:700;color:var(--muted);font-size:13px;border:1px solid rgba(11,11,11,0.03)}
+
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--black-elegant);color:white;text-decoration:none;font-weight:700}
+
+  </style>
+</head>
+<body>
+  <div class="wrap" role="document">
+    <header class="card" aria-label="Profil singkat Ria Agustin">
+      <div class="avatar" aria-hidden="true">RA</div>
+      <h1>Ria Agustin</h1>
+      <p class="sub">Mahasiswa Sistem Teknologi dan Informasi — Angkatan 2025</p>
+      <div style="height:10px"></div>
+      <div class="meta-row" aria-hidden="true">
+        <div class="pill">Suka menggambar</div>
+        <div class="pill">Tertarik bahasa asing</div>
+      </div>
+    </header><main>
+  <section class="section" id="about">
+    <h2>About <span class="tag">Tentang</span></h2>
+    <p>Saya suka menggambar, tidak suka hal yang rumit, dan saya suka makan makanan manis. Saya tertarik dengan bahasa-bahasa asing dan sedang belajar menggabungkan minat kreatif saya dengan teknologi.</p>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Keahlian</h2>
+    <ul class="skills">
+      <li>Gambar & Ilustrasi</li>
+      <li>Desain Sederhana</li>
+      <li>Dasar Web (HTML/CSS)</li>
+      <li>Belajar Bahasa Asing</li>
+    </ul>
+  </section>
+
+  <section class="section" id="education">
+    <h2>Pendidikan</h2>
+    <p>Mahasiswa Sistem Teknologi dan Informasi, Angkatan 2025.</p>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Kontak</h2>
+    <p>Instagram resmi: </p>
+    <a class="handle" href="https://instagram.com/IG_shikikanee" target="_blank" rel="noopener">@IG_shikikanee</a>
+    <div style="height:12px"></div>
+    <p>Ingin menghubungi lewat email? Ganti placeholder di file ini menjadi email-mu.</p>
+  </section>
+
+  <section class="section" id="cta">
+    <h2>Ingin melihat portofolio?</h2>
+    <p>Tambahkan file gambar karya atau link ke Dribbble / Behance / GitHub. Untuk sekarang, kamu bisa membagikan profil ini ke teman.</p>
+    <a class="btn" href="#contact">Hubungi Saya</a>
+  </section>
+
+  <footer>
+    © 2025 Ria Agustin — Dibuat dengan sederhana dan rapi.
+  </footer>
+</main>
+
+  </div></body>
+</html>
